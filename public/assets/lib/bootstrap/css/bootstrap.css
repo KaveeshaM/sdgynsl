@@ -6755,3 +6755,86 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+
+.login-block{
+    background: #DE6262;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float:left;
+    width:100%;
+    padding : 50px 0;
+}
+
+.banner-sec{
+  background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)
+  no-repeat left bottom;
+  background-size:cover;
+  min-height:500px;
+  border-radius: 0 10px 10px 0;
+  padding:0;}
+
+.carousel-inner{border-radius:0 10px 10px 0;}
+
+
+
+.banner-text{
+  width:70%;
+  position:absolute;
+  bottom:40px;
+  padding-left:20px;}
+
+.banner-text h2{
+  color:#fff;
+   font-weight:600;}
+
+
+.banner-text h2:after{
+  content:" ";
+  width:100px;
+  height:5px;
+  background:#FFF;
+  display:block;
+  margin-top:20px;
+  border-radius:3px;}
+
+
+.banner-text p{color:#fff;}
+
+
+.login-sec{padding: 50px 30px; position:relative;}
+
+.login-sec h2{
+  margin-bottom:30px;
+  font-weight:800;
+  font-size:30px;
+  color: #DE6262;}
+.login-sec h2:after{content:" ";
+ width:100px;
+ height:5px;
+  background:#FEB58A;
+  display:block;
+  margin-top:20px;
+  border-radius:3px;
+  margin-left:auto;
+  margin-right:auto
+}

@@ -1197,7 +1197,7 @@ if (typeof Object.create !== "function") {
                 iterations += 1;
                 if (base.completeImg($lazyImg.get(0)) || isBackgroundImg === true) {
                     showImage();
-                } else if (iterations <= 100) {//if image loads in less than 10 seconds 
+                } else if (iterations <= 100) {//if image loads in less than 10 seconds
                     window.setTimeout(checkLazyImage, 100);
                 } else {
                     showImage();
@@ -1226,7 +1226,7 @@ if (typeof Object.create !== "function") {
                 iterations += 1;
                 if (base.completeImg($currentimg.get(0))) {
                     addHeight();
-                } else if (iterations <= 100) { //if image loads in less than 10 seconds 
+                } else if (iterations <= 100) { //if image loads in less than 10 seconds
                     window.setTimeout(checkImage, 100);
                 } else {
                     base.wrapperOuter.css("height", ""); //Else remove height attribute
@@ -1449,9 +1449,14 @@ if (typeof Object.create !== "function") {
         });
     };
 
+
+
+
+
+
     $.fn.owlCarousel.options = {
 
-        items : 5,
+        items : 4,
         itemsCustom : false,
         itemsDesktop : [1199, 4],
         itemsDesktopSmall : [979, 3],
@@ -1461,11 +1466,11 @@ if (typeof Object.create !== "function") {
         singleItem : false,
         itemsScaleUp : false,
 
-        slideSpeed : 200,
+        slideSpeed : 300,
         paginationSpeed : 800,
         rewindSpeed : 1000,
 
-        autoPlay : false,
+        autoPlay : true,
         stopOnHover : false,
 
         navigation : false,
@@ -1510,3 +1515,21 @@ if (typeof Object.create !== "function") {
         afterLazyLoad: false
     };
 }(jQuery, window, document));
+
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})

@@ -20,62 +20,27 @@
 
 
 <section class="section1">
-    <div class="container">
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="servicebox text-center">
-                <div class="service-icon">
-                    <div class="dm-icon-effect-1" data-effect="slide-left">
-                        <a href="#" class=""> <i class="active dm-icon fa fa-bars fa-3x"></i> </a>
-                    </div>
-                    <div class="servicetitle">
-                        <h4>Responsive Layout</h4>
-                        <hr>
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since..</p>
-                </div>
-                <!-- service-icon -->
-            </div>
-            <!-- servicebox -->
-        </div>
-        <!-- large-4 -->
 
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="servicebox text-center">
-                <div class="service-icon">
-                    <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                        <a href="#" class=""> <i class="active dm-icon fa fa-laptop fa-3x"></i> </a>
-                    </div>
-                    <div class="servicetitle">
-                        <h4>Creative Design</h4>
-                        <hr>
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since..</p>
-                </div>
-                <!-- service-icon -->
-            </div>
-            <!-- servicebox -->
-        </div>
-        <!-- large-4 -->
-
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="servicebox text-center">
-                <div class="service-icon">
-                    <div class="dm-icon-effect-1" data-effect="slide-right">
-                        <a href="#" class=""> <i class="active dm-icon fa fa-book fa-3x"></i> </a>
-                    </div>
-                    <div class="servicetitle">
-                        <h4>Easy to Setup</h4>
-                        <hr>
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since..</p>
-                </div>
-                <!-- service-icon -->
-            </div>
-            <!-- servicebox -->
-        </div>
-        <!-- large-4 -->
+    <div class="owl-carousel owl-theme ">
+        <div class="item " ><img src ="assets\img\goals\g1.png"></div>
+        <div class="item "><img src ="assets\img\goals\g2.png"></div>
+        <div class="item"><img src ="assets\img\goals\g3.png"></div>
+        <div class="item"><img src ="assets\img\goals\g4.png"></div>
+        <div class="item"><img src ="assets\img\goals\g5.png"></div>
+        <div class="item"><img src ="assets\img\goals\g6.png"></div>
+        <div class="item"><img src ="assets\img\goals\g7.png"></div>
+        <div class="item"><img src ="assets\img\goals\g8.png"></div>
+        <div class="item "><img src ="assets\img\goals\g9.png"></div>
+        <div class="item"><img src ="assets\img\goals\g10.png"></div>
+        <div class="item"><img src ="assets\img\goals\g11.png"></div>
+        <div class="item"><img src ="assets\img\goals\g12.png"></div>
+        <div class="item"><img src ="assets\img\goals\g13.png"></div>
+        <div class="item"><img src ="assets\img\goals\g14.png"></div>
+        <div class="item"><img src ="assets\img\goals\g15.png"></div>
+        <div class="item"><img src ="assets\img\goals\g16.png"></div>
+        <div class="item"><img src ="assets\img\goals\g17.png"></div>
     </div>
-    <!-- end container -->
+
 </section>
 <!-- end section -->
 

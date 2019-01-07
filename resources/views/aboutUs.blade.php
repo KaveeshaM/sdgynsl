@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<body>
 @include('layouts.header')
-<section class="post-wrapper-top">
+<section id="intro">
     <div class="container">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li>About</li>
-            </ul>
-            <h2>ABOUT</h2>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <!-- search -->
-            <div class="search-bar">
-                <form action="" method="get">
-                    <fieldset>
-                        <input type="image" src="aasets/img/pixel.gif" class="searchsubmit" alt="" />
-                        <input type="text" class="search_text showtextback" name="s" id="s" value="Search..." />
-                    </fieldset>
-                </form>
+        <div class="ror">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Sustainable Development Goals Youth Network Sri Lanka</h1>
+                <p>Organizing,Empowering,Linking,Training, Networking and involving youth in a processes towards archiving 'Sustainable Development Goals" declared by the UN
+                    categories</p>
             </div>
-            <!-- / end div .search-bar -->
         </div>
     </div>
 </section>
@@ -32,37 +20,39 @@
     <div class="container clearfix">
         <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
             <div class="general-title text-center">
-                <h3>ABOUT OUR COMPANY</h3>
-                <p>Learn more about us</p>
+                <h3>ABOUT UN IN SRI LANKA</h3>
+                
                 <hr>
             </div>
             <div class="divider"></div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="he-wrap tpl2">
-                    <img src="aasets/img/office.png" alt="" class="img-responsive">
-                    <div class="he-view">
-                        <div class="bg a0" data-animate="fadeIn">
-                            <div class="center-bar">
-                                <a href="#" class="twitter a0" data-animate="elasticInDown"></a>
-                                <a href="#" class="facebook a1" data-animate="elasticInDown"></a>
-                                <a href="#" class="google a2" data-animate="elasticInDown"></a>
-                            </div>
-                        </div>
-                    </div>
+                    <img src="assets\img\imgs\unsl.jpg" alt="" class="img-responsive">
                 </div>
                 <!-- he wrap -->
             </div>
             <!-- end col-6 -->
 
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>The United Nations began its work in Sri Lanka in 1952.
+   Three years later, on 14 December 1955, Sri Lanka was admitted
+    as a member state of the UN. </p>
 
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    <p>For more than sixty years, the UN, in partnership with the government
+ and people of Sri Lanka, continues to work to ensure that all Sri Lankan
+  people enjoy better living conditions. </p>
 
-                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
+    <p>  Collectively and through its 23 specialised agencies, funds, programmes and offices in Sri Lanka, the UN
+  addresses the needs and creates opportunities for the poor, the most
+  vulnerable and the young. </p>
+<p>The UN has cultivated broad and wide ranging partnerships – with the Government,
+civil society, the broad NGO community, bilateral donors, and international financial
+institutions – to address a multitude of challenges, both in long term development,
+and during times of emergency. </p>
+<p>Moving forward, the UN strives to support the Government of Sri Lanka to achieve
+sustainable and inclusive economic growth, with equitable access to quality social
+services, strengthened human capabilities and reconciliation for long-lasting peace.</p>
+</div>
             <!-- end col-6 -->
         </div>
     </div>
@@ -74,42 +64,30 @@
 <div class="divider"></div>
 
 <div class="container">
+<div class="general-title text-center">
+  <h3>UN RESIDENT COORDINATOR IN SRI LANKA</h3>
+</div>
+
+
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+    <div class="avatar">
+          <img alt="" src="assets\img\imgs\Hana.jpg">
+          </div>
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     <div class="general-title text-center">
-        <h3>WHAT WE DO</h3>
-        <p>Our skills information</p>
+
+        <p>"Sustainable Development Goals are not merely a buzz word in these changing times,
+      it is reminder of what our priorities should be. They are a collective agenda for all of us,
+      and achieving them is about our collective future, our planet’s future. There is no alternative
+      or postponing it for a later day. We must act on it together, and act on it now
+      Ms. Hanaa Singer, UN Resident Coordinator and UNDP Resident Representative"</p>
         <hr>
     </div>
+</div>
 
-    <div class="skills text-center">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <span class="chart" data-percent="90">
-                        <span class="percent"></span>
-        </span>
-            <h4 class="title">HTML5 & CSS3</h4>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <span class="chart" data-percent="75">
-                        <span class="percent"></span>
-        </span>
-            <h4 class="title">WordPress</h4>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <span class="chart" data-percent="65">
-                        <span class="percent"></span>
-        </span>
-            <h4 class="title">Graphic Design</h4>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <span class="chart" data-percent="80">
-                        <span class="percent"></span>
-        </span>
-            <h4 class="title">Mobile Applications</h4>
-        </div>
-    </div>
-    <!-- end skills -->
 </div>
 <!-- end container -->
 
@@ -119,71 +97,27 @@
 <section class="section1">
     <div class="container">
         <div class="general-title text-center">
-            <h3>SOME STATS</h3>
-            <p>Important information about us</p>
+            <h3>UN RESIDENT COORDINATOR IN SRI LANKA</h3>
             <hr>
         </div>
 
-        <div class="stat f-container">
-            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fa fa-film fa-4x"></i>
-                <div class="milestone-counter">
-                    <span class="stat-count highlight">42</span>
-                    <div class="milestone-details">Films Produced</div>
-                </div>
-            </div>
-            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fa fa-laptop fa-4x"></i>
-                <div class="milestone-counter">
-                    <span class="stat-count highlight">105</span>
-                    <div class="milestone-details">Completed Projects</div>
-                </div>
-            </div>
-            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fa fa-comments-o fa-4x"></i>
-                <div class="milestone-counter">
-                    <span class="stat-count highlight">492</span>
-                    <div class="milestone-details">Questions Answered</div>
-                </div>
-            </div>
-            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fa fa-smile-o fa-4x"></i>
-                <div class="milestone-counter">
-                    <span class="stat-count highlight">790</span>
-                    <div class="milestone-details">Happy Clients</div>
-                </div>
-            </div>
-        </div>
-        <!-- end stat -->
+        <div class="text-center">
+            <img alt="" src="assets\img\imgs\UN.png">
+          </div>
 
     </div>
     <!-- end container -->
 </section>
 <!-- end section -->
 
-<section class="section3 withpadding">
-    <div class="container">
-        <div class="message">
-            <div class="col-lg-9 col-md-9 col-sm-9">
-                <h3>Grab the attention of your customers!</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s..</p>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <a class="dmbutton button large pull-right" href="#"><i class="fa fa-download"></i> GET A QUOTE</a>
-            </div>
-        </div>
-        <!-- end message -->
-    </div>
-    <!-- end container -->
-</section>
-<!-- end section3 -->
+
 
 <footer class="footer">
     <div class="container">
         <div class="widget col-lg-3 col-md-3 col-sm-12">
             <h4 class="title">About us</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s..</p>
-            <a class="button small" href="#">read more</a>
+            <p>The United Nations began its work in Sri Lanka in 1952. Three years later, on 14 December 1955..</p>
+            <a class="button small" href="/aboutUs">read more</a>
         </div>
         <!-- end widget -->
         <div class="widget col-lg-3 col-md-3 col-sm-12">

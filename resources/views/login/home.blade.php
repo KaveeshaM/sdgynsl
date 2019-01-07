@@ -2,6 +2,21 @@
 <body>
 
 
+<section>
+    <div class="container">
+
+        @if(count($live)>0)
+            <h3>Now streaming Live</h3>
+            @foreach($live as $l)
+                <p>{{$l->name}}</p>
+                <a href="{{$l->link}}"> Watch live streaming</a>
+                <br>
+                <br>
+            @endforeach
+        @endif
+    </div>
+</section>
+
 <section class="section1">
     <div class="container">
         <div class="col-lg-4 col-md-4 col-sm-4">

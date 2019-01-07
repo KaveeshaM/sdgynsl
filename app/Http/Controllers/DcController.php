@@ -33,7 +33,7 @@ class DcController extends Controller
 
         $user->save();
 
-        return view('/home');
+        return view('add_dc');
     }
 
 }

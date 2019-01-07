@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Schema;
-
+use Mail;
 
 
 class EventController extends Controller
@@ -41,7 +41,7 @@ class EventController extends Controller
         $event->time =$_POST['time'] ;
         $event->venue =$_POST['venue'] ;
         $event->description =$_POST['description'] ;
-        if(($_POST['file'])!=""){
+        if($_POST['file']!=""){
             $files=$_POST['file'];
                 foreach($files as $file){
                     $event->files =$file ;
@@ -61,6 +61,13 @@ class EventController extends Controller
         else $event->register ='no' ;
 
         $event->save();
+
+    Mail::send(['text'=>'login/newEventMail'],['name',Auth::User()->name],function ($messege){
+        $res = DB::table('users')->get();
+        foreach ($res as $r){
+        $messege->to($r->email)->subject("Event Upload");
+        $messege->from('sdgynsl18@gmail.com');
+    }});
 
 
 
@@ -111,5 +118,20 @@ class EventController extends Controller
     {
         $events = DB::table('events')->get();
         return view('login.events')->with('events',$events);
+    }
+    public function like(Request $request, $id){
+
+            $action = $request->get('action');
+            switch ($action) {
+                case 'Like':
+                    Events::where('id', $id)->increment('like');
+                    break;
+                case 'Unlike':
+                    Events::where('id', $id)->decrement('like');
+                    break;
+            }
+            return '';
+
+
     }
 }

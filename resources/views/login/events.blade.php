@@ -28,6 +28,17 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <p>{{$e->description}}</p>
             </div>
+            <div>
+
+                    <div class="row">
+                        <button onclick="actOnEvent(event);" data-event-id="{{ $e->id }}">Like</button>
+                        <span id="likes-{{ $e->id }}">{{ $e->like }}</span>
+                    </div>
+
+
+                </form>
+
+            </div>
         </div>
 
             <!-- end col-6 -->
@@ -36,5 +47,38 @@
     </div>
     <!-- end container -->
 </section>
+<script src="js/app.js">
+    var updateLikeStats = {
+        Like: function (eventId) {
+            document.querySelector('#likes-' + eventId).textContent++;
+        },
+
+        Unlike: function(eventId) {
+            document.querySelector('#likes-' + eventId).textContent--;
+        }
+    };
+
+
+    var toggleButtonText = {
+        Like: function(button) {
+            button.textContent = "Unlike";
+        },
+
+        Unlike: function(button) {
+            button.textContent = "Like";
+        }
+    };
+
+    var actOnEvent = function (event) {
+        var eventId = event.target.dataset.eventId;
+        var action = event.target.textContent;
+        toggleButtonText[action](event.target);
+        updateLikeStats[action](eventId);
+        axios.post('/event/' + eventId + '/like',
+            { action: action });
+    };
+
+</script>
+
 @endforeach
-  @include('layouts.footer')
+@include('layouts.footer')

@@ -15,7 +15,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $msg = Msg::all();
+        $msg = Messages::all();
 
         return view('admin.view_messages')->with('msg', $msg);
     }
@@ -52,9 +52,6 @@ class MessageController extends Controller
             'message' => $request -> get('message')
         ]);
 
-        /*$messages->name = $request -> get('name');
-        $messages->email = $request -> get('email');
-        $messages->message = $request -> get('message');*/
 
         $messages->save();
 

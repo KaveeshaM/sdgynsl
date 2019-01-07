@@ -44,13 +44,8 @@
                             <label for="division" class="col-md-4 col-form-label text-md-right">{{ __('Division') }}</label>
 
                             <div class="col-md-6">
-                                <input id="division" type="text" class="form-control{{ $errors->has('division') ? ' is-invalid' : '' }}" name="division" value="{{ old('division') }}" required autofocus>
+                                <input id="division" type="text" name="division" class="form-control" value="Undefined" required autofocus>
 
-                                @if ($errors->has('division'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('division') }}</strong>
-                                    </span>
-                                @endif
                             </div>
                         </div>
 
@@ -85,13 +80,7 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                             <div class="col-md-6">
-                                <input id="role" type="text" class="form-control{{ $errors->has('role') ? ' is-invalid' : '' }}" name="role" value="{{ old('division') }}" required autofocus>
-
-                                @if ($errors->has('role'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('role') }}</strong>
-                                    </span>
-                                @endif
+                                <input id="role" type="text" class="form-control" name="role" value="Dc" required autofocus>
                             </div>
                         </div>
 

@@ -1,10 +1,10 @@
   #owl-demo .item {
-    margin: 0;
+    margin: 10px;
   }
 
   #owl-demo .item img {
     display: block;
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 
@@ -155,7 +155,7 @@
   }
 
   .owl-pagination {
-    top: -40px;
+    top: 300px;
     position: absolute;
     left: 0;
     right: 0;
