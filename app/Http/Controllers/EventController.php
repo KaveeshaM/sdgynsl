@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Auth;
 use DB;
 use App\Events;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -119,19 +120,36 @@ class EventController extends Controller
         $events = DB::table('events')->get();
         return view('login.events')->with('events',$events);
     }
-    public function like(Request $request, $id){
+    public function likeEvent(Request $request){
+        $event_id=$request['eventId'];
+        $is_like=$request['isLike']==='true';
+        $update=false;
+        $event= Events::find($event_id);
 
-            $action = $request->get('action');
-            switch ($action) {
-                case 'Like':
-                    Events::where('id', $id)->increment('like');
-                    break;
-                case 'Unlike':
-                    Events::where('id', $id)->decrement('like');
-                    break;
+        if(!$event){
+            return null;
+        }
+        $user =Auth::user();
+        $like=$user->likes()->where('event_id',$event_id)->first();
+        if($like){
+            $already_like=$like->like;
+            $update=true;
+            if($already_like==$is_like){
+                $like->delete();
+                return null;
             }
-            return '';
+        }else{
+            $like=new Like();
+        }
+        $like->like=$is_like;
+        $like->user_id=$user->id;
+        $like->event_id=$event->id;
 
-
+        if($update){
+            $like->update();
+        }else {
+            $like->save();
+        }
+        return null;
     }
 }

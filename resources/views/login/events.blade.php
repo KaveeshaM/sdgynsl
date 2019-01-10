@@ -1,3 +1,6 @@
+<head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+</head>
 @include('login.loginheader')
 @foreach($events as $e)
 <section class="section1">
@@ -28,16 +31,13 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <p>{{$e->description}}</p>
             </div>
-            <div>
-
-                    <div class="row">
-                        <button onclick="actOnEvent(event);" data-event-id="{{ $e->id }}">Like</button>
-                        <span id="likes-{{ $e->id }}">{{ $e->like }}</span>
-                    </div>
-
-
-                </form>
-
+            <div >
+                <a href="#" class="like" >
+                    {{Auth::user()->likes()->where('event_id',$e->id)->first()? Auth::user()->likes()->where('event_id',$e->id)->first()->like==1? 'You have liked this post':'Like' : 'Like'}}
+                </a>
+                <a href="#" class="like" >
+                    {{Auth::user()->likes()->where('event_id',$e->id)->first()? Auth::user()->likes()->where('event_id',$e->id)->first()->like==0? 'You dont like this post':'Dislike' : 'Dislike'}}
+                </a>
             </div>
         </div>
 
@@ -47,37 +47,11 @@
     </div>
     <!-- end container -->
 </section>
-<script src="js/app.js">
-    var updateLikeStats = {
-        Like: function (eventId) {
-            document.querySelector('#likes-' + eventId).textContent++;
-        },
 
-        Unlike: function(eventId) {
-            document.querySelector('#likes-' + eventId).textContent--;
-        }
-    };
-
-
-    var toggleButtonText = {
-        Like: function(button) {
-            button.textContent = "Unlike";
-        },
-
-        Unlike: function(button) {
-            button.textContent = "Like";
-        }
-    };
-
-    var actOnEvent = function (event) {
-        var eventId = event.target.dataset.eventId;
-        var action = event.target.textContent;
-        toggleButtonText[action](event.target);
-        updateLikeStats[action](eventId);
-        axios.post('/event/' + eventId + '/like',
-            { action: action });
-    };
-
+<script src="{{asset('/js/like.js')}}" ></script>
+<script type="text/javascript">
+    var token='{{Session::token()}}';
+    var urlLike='{{route('like')}}'
 </script>
 
 @endforeach

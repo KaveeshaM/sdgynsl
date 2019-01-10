@@ -31,15 +31,21 @@ class MemberController extends Controller
     {
 if(Auth::User()->role=='Dc'){
     $district=Auth::User()->district;
-    $res = DB::table('users')->where('district', $district)->groupBy('division')->get();
+    $res = DB::table('users')->where('district', $district)->orderBy('division')->orderBy('role')->get();
     return view('login.allmembers')->with('res', $res);
 
 }
+else if(Auth::User()->role=='Secretary') {
+    $division = Auth::User()->division;
+    $res = DB::table('users')->where('division', $division)->whereIn('role',['Member'])->get();
+    return view('login.members')->with('res', $res);
+}
+else if(Auth::User()->role=='admin') {
+    $res = DB::table('users')->whereIn('role',['Member','Secretary','Mc'])->orderBy('district')->orderBy('division')->orderBy('role')->get();
+    return view('members_view')->with('res', $res);
+}
 else
-    $division=Auth::User()->division;
-        $res = DB::table('users')->where('division', $division)->get();
-        return view('login.members')->with('res', $res);
-
+    return view('/home');
     }
     public function update()
     {
@@ -58,23 +64,23 @@ else
                         DB::table('users')
                             ->where('email', $email[$i])
                             ->update(['role' => $changeRole]);
-                        $messege->to($x)->subject("Role Chaneges");
+                        $messege->to($x)->subject("Role Changes");
                         $messege->from('sdgynsl18@gmail.com');
-                    } }$i++;
+                    } $i++;}
                 });
 
 
 
-        $live=DB::table('livestreams')->where('status','Yes')->get();
 
-        return view('login.home')->with('live',$live);
+          return redirect()->back()->with('message', 'Updated Successfully!');
     }
     public function delete(){
-        foreach ($_POST['delete'] as $delete ){
-            if($delete=='yes'){
-                DB::table('users')->where('email', $_POST['email'])->delete();
-            }
+
+
+        foreach ($_POST['delete'] as $delete){
+            DB::table('users')->where('email', $delete)->delete();
         }
 
+        return redirect()->back()->with('message', 'Deleted  Successfully!');
     }
 }

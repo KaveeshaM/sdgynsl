@@ -8,7 +8,7 @@
 @endif
 <br>
 <div class="container">
-    <form action="{{ url('/members/delete') }}" method="post">
+    <form action="" method="post">
         {{ csrf_field() }}
         <table class="table">
             <thead>
@@ -19,7 +19,6 @@
                 <th scope="col">Division</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
-                <th scope="col" >Delete</th>
             </tr>
             </thead>
             @if(count($res) > 0)
@@ -27,7 +26,7 @@
                 <div class="row justify-content-center">
                     @foreach($res as $r)
                         <tbody>
-                        @if($r->role=='Secretary')
+                        @if($r->role=='admin')
                         @else
                             <tr>
 
@@ -39,13 +38,6 @@
                                         <td>{{$r->division}}</td>
                                         <td><input type="email"name="email[]"value="{{$r->email}}" hidden>{{$r->email}}</td>
                                         <td>{{$r->role}}</td>
-                                        <td>
-                                            <div class="form-group row">
-                                                <div class="col-sm-8">
-                                                    <input type="checkbox" name=delete[] value="{{$r->email}}">
-                                                </div>
-                                            </div>
-                                        </td>
 
                                     </div>
                                 </div>
@@ -53,7 +45,6 @@
                         @endif
                         @endforeach
 
-                        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><input type="submit"name="update" ></td></tr>
                         </tbody>
 
                 </div>

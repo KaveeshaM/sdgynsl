@@ -66,14 +66,14 @@
                         <ul id="jetmenu" class="jetmenu blue">
                             <li class="active"><a href="{{ url('/') }}">Home</a>
                             </li>
-                            <li><a href="#">ABOUT US</a>
+                            <li><a href="{{ url('/aboutUs') }}">ABOUT US</a></li>
+                            <li><a href="#">EVENTS</a></li>
+                            <li><a href="#">ACHIEVEMENTS</a></li>
+                            <li><a href="{{ url('/contact_us') }}">CONTACT US</a>
                                 <ul class="dropdown">
-                                    <li><a href="{{ url('/aboutUs') }}">About Us</a></li>
+                                    <li><a href="/view_messages">SHOW MESSAGES</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">PROJECTS</a></li>
-                            <li><a href="#">ACHIEVEMENTS</a></li>
-                            <li><a href="{{ url('/contact_us') }}">CONTACT US</a></li>
 
                             <!-- Authentication Links -->
                             @guest
